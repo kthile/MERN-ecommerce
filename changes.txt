@@ -1,0 +1,6 @@
+1. Form field requires you to mouse in. Autofill will break
+2. Server register post method needs to include something like .com, fix the regex
+3. Register only shows static message on server errors. Maybe a way to print server errors?
+4. Articles is not a good url. Change in server config and product_actions
+5. Appropriate form errors based on SERVER. i.e. admin addproduct will show nothing if there is a duplicate name(key)
+6. Card.js - if user adds to cart unauthenticated tell them they need to login and redirect

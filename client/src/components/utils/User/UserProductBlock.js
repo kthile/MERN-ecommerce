@@ -1,0 +1,52 @@
+import React from "react";
+
+const UserProductBlock = ({ products, removeItem }) => {
+  const renderCartImages = images => {
+    if (images.length > 0) {
+      return images[0].url;
+    } else {
+      return "/images/not_avail.png";
+    }
+  };
+
+  const renderItems = () =>
+    products.cartDetail
+      ? products.cartDetail.map((product, i) => (
+          <div className="user_product_block" key={product._id}>
+            <div className="item">
+              <div
+                className="image"
+                style={{
+                  background: `url(${renderCartImages(
+                    product.images
+                  )}) no-repeat`
+                }}
+              />
+            </div>
+            <div className="item">
+              <h4>Product name</h4>
+              <div>
+                {product.brand.name} {product.name}
+              </div>
+            </div>
+            <div className="item">
+              <h4>Amount</h4>
+              <div>{product.quantity}</div>
+            </div>
+            <div className="item">
+              <h4>Price</h4>
+              <div>${product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</div>
+            </div>
+            <div className="item btn">
+              <div className="cart_remove_btn" onClick={()=> removeItem(product._id)}>
+                Remove
+              </div>
+            </div>
+          </div>
+        ))
+      : null;
+
+  return <div>{renderItems()}</div>;
+};
+
+export default UserProductBlock;
