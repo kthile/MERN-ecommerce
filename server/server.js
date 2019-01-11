@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(express.static('client/build'));
+app.use(express.static("client/build"));
 
 /* MODELS */
 const { User } = require("./models/user");
@@ -28,7 +28,6 @@ const { Site } = require("./models/site");
 /* MIDDLEWARE */
 const { auth } = require("./middleware/auth");
 const { admin } = require("./middleware/admin");
-
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -445,30 +444,28 @@ app.get("/api/site/site_data", (req, res) => {
   });
 });
 
-app.post("/api/site/site_data", auth, admin, (req,res) => {
+app.post("/api/site/site_data", auth, admin, (req, res) => {
   Site.findOneAndUpdate(
-    {name:'Site'},
-    {"$set":{siteInfo: req.body}},
-    {new: true},
-    (err, doc)=>{
-      if(err) return res.json({success:false,err});
+    { name: "Site" },
+    { $set: { siteInfo: req.body } },
+    { new: true },
+    (err, doc) => {
+      if (err) return res.json({ success: false, err });
 
       return res.status(200).send({
-        success:true,
+        success: true,
         siteInfo: doc.siteInfo
-      })
-      
+      });
     }
-  )
-})
-
+  );
+});
 
 //DEFAULT
-if(process.env.NODE_ENV === 'production'){
-  const path = require('path');
-  app.get('/*', (req,res)=>{
-    res.sendfile(path.resolve(__dirname,'../client','build','index.html'))
-  })
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.get("/*", (req, res) => {
+    res.sendfile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
 }
 
 const port = process.env.PORT || 3002;
