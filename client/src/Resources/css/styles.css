@@ -28,11 +28,11 @@ a {
 }
 
 .bck_b_light {
-  background: #999592;
+  background: #1f1f1f;
 }
 
 .bck_b_dark {
-  background: #272723;
+  background: #070707;
 }
 
 .dialog_alert {
@@ -245,7 +245,7 @@ header {
   /*position: fixed;*/
   z-index: 999;
   width: 100%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(36, 36, 36);
   height: auto;
 }
 
@@ -253,6 +253,7 @@ header .logo {
   font-family: "Monoton", cursive;
   color: #ffffff;
   font-size: 40px;
+  text-align:center;
 }
 
 header a {
@@ -269,8 +270,8 @@ header .container .left {
 
 header .container .right {
   flex-grow: 1;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+ /* border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;*/
 }
 header .container .right .top,
 header .container .right .bottom {
@@ -284,7 +285,7 @@ header .container .right .bottom {
 
 header .container .right .top {
   color: #c9c9c9;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #646464;
 }
 
 header .cart_link {
@@ -368,7 +369,7 @@ footer .business_nfo .nfo {
 }
 
 .featured_container .featured_action .tag {
-  background: #82828287;
+  background: #000000a4;
   color: #ffffff;
   padding: 0px 20px;
   text-transform: uppercase;
@@ -399,7 +400,7 @@ footer .business_nfo .nfo {
 }
 
 .home_promotion .tag {
-  background: #82828287;
+  background: #2b2b2ba9;
   color: #ffffff;
   padding: 0px 20px;
   text-transform: uppercase;
@@ -434,8 +435,10 @@ footer .business_nfo .nfo {
 .card_block .title {
   text-transform: uppercase;
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
   margin-bottom: 50px;
+  font-weight:bold;
+  
 }
 
 .card_block_shop .card_item_wrapper {
@@ -518,6 +521,8 @@ footer .business_nfo .nfo {
 .card_item_wrapper.grid_bars .action_container {
   flex-grow: 1;
   border: 1px solid #e6e6e6;
+  max-width: 500px;
+  max-height: 300px;
 }
 
 .card_item_wrapper.grid_bars .description {

@@ -18,7 +18,7 @@ const CardBlock = props => {
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap"
+            flexWrap: "wrap",
           }}
         >
           {renderCards(props.list)}

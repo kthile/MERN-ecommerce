@@ -22,7 +22,7 @@ class Home extends Component {
         <HomeSlider />
         <CardBlock
           list={this.props.products.bySell}
-          title="Best Selling Guitars"
+          title="Best Sellers"
         />
         <HomePromotion />
         <CardBlock
