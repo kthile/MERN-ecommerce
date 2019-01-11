@@ -11,7 +11,7 @@ body {
 }
 .page_container {
   min-height: 75vh;
-  padding-top: 85px;
+  /*padding-top: 85px;*/
 }
 .main_loader {
   text-align: center;
@@ -19,7 +19,7 @@ body {
 }
 
 .page_wrapper {
-  padding-top: 85px;
+  /*padding-top: 85px;*/
 }
 
 a {
@@ -242,17 +242,17 @@ select {
             HEADER
 ==============================*/
 header {
-  position: fixed;
+  /*position: fixed;*/
   z-index: 999;
   width: 100%;
   border-bottom: 1px solid white;
+  height: auto;
 }
 
 header .logo {
   font-family: "Monoton", cursive;
   color: #ffffff;
   font-size: 40px;
-  padding: 11px 0px;
 }
 
 header a {

@@ -25,5 +25,8 @@
     "server": "nodemon server/server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "engines":{
+    "node":"v8.11.4"
   }
 }
