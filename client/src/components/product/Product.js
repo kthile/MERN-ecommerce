@@ -12,6 +12,7 @@ import { addToCart } from '../../actions/user_actions'
 
 class Product extends Component {
   componentDidMount() {
+    window.scrollTo(0,0);
     const id = this.props.match.params.id;
     this.props.dispatch(getProductDetail(id)).then(response=>{
         if(!this.props.products.prodDetail){
