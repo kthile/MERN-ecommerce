@@ -11,7 +11,7 @@ const Footer = (props) => {
     props.data.siteData ?
     <footer className="bck_b_dark">
       <div className="container">
-        <div className="logo">Waves</div>
+        <div className="logo">LOGO</div>
         <div className="wrapper">
           <div className="left">
             <h2>Contact Information</h2>
