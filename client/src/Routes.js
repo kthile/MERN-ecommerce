@@ -10,6 +10,7 @@ import Register from "./components/register_login/Register";
 import Error404 from "./components/error/Error404";
 import Shop from './components/shop/Shop';
 import Product from './components/product/Product'
+import Loading from './components/loading_screen/Loading'
 
 //Private Routes
 import UserDashboard from "./components/user/UserDashboard";

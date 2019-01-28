@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { auth } from "../actions/user_actions";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Loading from "../components/loading_screen/Loading";
 
 export default function(RouteComponent, reload, adminRoute = null) {
   class AuthenticationCheck extends Component {
@@ -35,11 +36,7 @@ export default function(RouteComponent, reload, adminRoute = null) {
 
     render() {
       if (this.state.loading) {
-        return (
-          <div className="main_loader">
-            <CircularProgress style={{ color: "#2a2a2a" }} thickness={5} />
-          </div>
-        );
+        return <Loading />;
       } else {
         return <RouteComponent {...this.props} user={this.props.user} />;
       }

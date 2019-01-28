@@ -902,3 +902,33 @@ footer .business_nfo .nfo {
   background: #fff;
   opacity: 0.8
 }
+
+/*=============================
+         LOADING SCREEN
+===============================*/
+
+#loading-page body{
+  background: #141414;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Poppins;
+}
+
+#loading-page {
+  background: #222222;
+  width: 100%;
+  height: 100vh;
+}
+
+#loading-page .counter h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: grey;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-top: -10px;
+}

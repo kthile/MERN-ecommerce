@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HomeSlider from "./HomeSlider";
 import HomePromotion from "./HomePromotion";
+import Loading from "../loading_screen/Loading";
 
 import { connect } from "react-redux";
 import {
@@ -20,10 +21,7 @@ class Home extends Component {
     return (
       <div>
         <HomeSlider />
-        <CardBlock
-          list={this.props.products.bySell}
-          title="Best Sellers"
-        />
+        <CardBlock list={this.props.products.bySell} title="Best Sellers" />
         <HomePromotion />
         <CardBlock
           list={this.props.products.byArrival}
